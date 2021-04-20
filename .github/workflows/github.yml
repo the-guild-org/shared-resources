@@ -6,19 +6,24 @@ on:
     paths:
       - .github/labels.yml
 jobs:
-  build:
+  labels_sync:
+    strategy:
+      # don't break another job if one is failed
+      fail-fast: false
+      matrix:
+        repo:
+          - dotansimha/graphql-code-generator
+          - dotansimha/graphql-eslint
+
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: micnncim/action-label-syncer@v1
+      - name: Checkout
+        uses: actions/checkout@v2.3.3
+
+      - name: Sync
+        uses: micnncim/action-label-syncer@v1.2.0
         with:
           manifest: .github/labels.yml
-          repository: dotansimha/graphql-code-generator
-          token: ${{ secrets.LABEL_SYNC_PAT }}
-          prune: false
-      - uses: micnncim/action-label-syncer@v1
-        with:
-          manifest: .github/labels.yml
-          repository: dotansimha/graphql-eslint
+          repository: ${{ matrix.repo }}
           token: ${{ secrets.LABEL_SYNC_PAT }}
           prune: false
