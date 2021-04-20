@@ -48,7 +48,7 @@
   
 - name: 'stage/5-alpha-release-testing'
   color: '89e610'
-  description: 'A pull request that aims to solve the issue has been merged and there is an alpha version to we can test with'      
+  description: 'The pull request is merged, an alpha release is available, to be tested'
   
 - name: 'stage/6-released'
   color: '0fed07'
