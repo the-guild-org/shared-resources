@@ -16,3 +16,9 @@ jobs:
           repository: dotansimha/graphql-code-generator
           token: ${{ secrets.LABEL_SYNC_PAT }}
           prune: false
+      - uses: micnncim/action-label-syncer@v1
+        with:
+          manifest: .github/labels.yml
+          repository: dotansimha/graphql-eslint
+          token: ${{ secrets.LABEL_SYNC_PAT }}
+          prune: false
