@@ -25,18 +25,34 @@
   color: '0052cc'
   description: 'Improvements or additions to documentation'
 
-- name: 'bug/0-needs-repro'
-  color: 'd73a4a'
-  description: 'More information is needed for reproduction.'
+- name: 'stage/0-issue-prerequisites'
+  color: 'a3a3a3'
+  description: 'Needs more information before we can start working on it'
   from_name: 'needs reproduction'
 
-- name: 'bug/1-repro-available'
-  color: 'd73a4a'
-  description: 'A reproduction exists and needs to be confirmed.'
+- name: 'stage/1-reproduction'
+  color: 'db5858'
+  description: 'A reproduction exists'
 
-- name: 'bug/2-confirmed'
-  color: 'd73a4a'
-  description: 'We have confirmed that this is a bug.'
+- name: 'stage/2-failing-test'
+  color: 'd6650f'
+  description: 'A failing test was created that describes the issue'
+  
+- name: 'stage/3-local-solution'
+  color: 'e6e610'
+  description: 'A user has a possible solution that solves the issue'
+  
+- name: 'stage/4-pull-request'
+  color: 'b4e610'
+  description: 'A pull request has been opened that aims to solve the issue'
+  
+- name: 'stage/5-alpha-release-testing'
+  color: '89e610'
+  description: 'A pull request that aims to solve the issue has been merged and there is an alpha version to we can test with'      
+  
+- name: 'stage/6-released'
+  color: '0fed07'
+  description: 'The issue has been solved on a released version of the library'        
 
 - name: 'waiting-for-answer'
   color: 'fef2c0'
