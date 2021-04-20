@@ -15,6 +15,16 @@ jobs:
         repo:
           - dotansimha/graphql-code-generator
           - dotansimha/graphql-eslint
+          - kamilkisiela/apollo-angular
+          - kamilkisiela/graphql-config
+          - Urigo/graphql-mesh
+          - Urigo/graphql-modules
+          - kamilkisiela/graphql-inspector
+          - ardatan/graphql-tools
+          - Urigo/graphql-scalars
+          - Urigo/WhatsApp-Clone-Tutorial
+          - dotansimha/envelop
+          - dotansimha/graphql-typed-document-node
 
     runs-on: ubuntu-latest
     steps:
