@@ -80,6 +80,10 @@
   color: '790e5d'
   description: 'Candidate for next Milestone.'
 
+- name: 'status/triage'
+  color: '0000ff'
+  description: 'Issue to be reviewed and actioned upon'
+
 - name: 'status/backlog'
   color: 'b60205'
   description: 'In the backlog'
